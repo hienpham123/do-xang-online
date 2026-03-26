@@ -6,7 +6,7 @@ import FuelPage from './pages/fuel-page';
 import HistoryPage from './pages/history-page';
 import HomePage from './pages/home-page';
 
-const App = () => {
+const AppRoot = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       <Navbar />
@@ -22,5 +22,5 @@ const App = () => {
   );
 };
 
-export default App;
+export default AppRoot;
 
