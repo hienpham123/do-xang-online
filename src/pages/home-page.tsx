@@ -1,8 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/button';
+import { useFuelPrices } from '../hooks/use-fuel-prices';
+import { formatVnd } from '../utils/currency';
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const { prices, lastUpdated, loading } = useFuelPrices();
 
   return (
     <section className="relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-b from-slate-900/60 to-slate-950 p-6 sm:p-10">
@@ -60,15 +63,22 @@ const HomePage = () => {
           <div className="mt-4 space-y-3">
             <div className="flex items-center justify-between rounded-2xl border border-slate-800 bg-slate-950/50 px-4 py-3">
               <span className="text-sm font-semibold">RON95</span>
-              <span className="text-sm text-cyan-200">25,000đ/L</span>
+              <span className="text-sm text-cyan-200">{formatVnd(prices.RON95)}/L</span>
             </div>
             <div className="flex items-center justify-between rounded-2xl border border-slate-800 bg-slate-950/50 px-4 py-3">
               <span className="text-sm font-semibold">E5</span>
-              <span className="text-sm text-cyan-200">22,000đ/L</span>
+              <span className="text-sm text-cyan-200">{formatVnd(prices.E5)}/L</span>
             </div>
             <div className="flex items-center justify-between rounded-2xl border border-slate-800 bg-slate-950/50 px-4 py-3">
               <span className="text-sm font-semibold">Diesel</span>
-              <span className="text-sm text-cyan-200">19,000đ/L</span>
+              <span className="text-sm text-cyan-200">{formatVnd(prices.Diesel)}/L</span>
+            </div>
+            <div className="px-1 text-right text-[11px] text-slate-500">
+              {loading
+                ? 'Đang cập nhật giá mới...'
+                : lastUpdated
+                  ? `Giá cập nhật: ${lastUpdated}`
+                  : 'Đang dùng giá fallback'}
             </div>
           </div>
         </div>
