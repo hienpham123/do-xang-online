@@ -6,7 +6,7 @@ const Footer = () => {
           Xăng ảo nhưng cảm xúc là thật
         </p>
         <p className="text-xs text-slate-500">
-          Demo vui nhộn, không cần backend.
+          Demo vui nhộn.
         </p>
       </div>
     </footer>

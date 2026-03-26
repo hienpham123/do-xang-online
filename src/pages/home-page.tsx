@@ -19,7 +19,7 @@ const HomePage = () => {
           </h1>
           <p className="mt-3 text-pretty text-slate-300">
             Chọn loại xăng, kéo số lít, bấm bơm. Xong rồi xem lịch sử ngay lập
-            tức. Không cần backend, chỉ cần cảm xúc.
+            tức.
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">

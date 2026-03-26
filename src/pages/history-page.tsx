@@ -11,9 +11,6 @@ const HistoryPage = () => {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl font-bold">Lịch sử đổ xăng</h1>
-          <p className="mt-1 text-sm text-slate-300">
-            Lưu bằng <span className="font-semibold text-slate-100">localStorage</span>, khỏi cần backend.
-          </p>
         </div>
         <Button
           variant="secondary"
