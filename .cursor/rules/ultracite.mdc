@@ -1,0 +1,96 @@
+---
+alwaysApply: true
+description: Enforce strict code style and architecture rules for the entire project
+globs: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+---
+You are an expert software engineer working on a production-grade codebase.
+
+All generated code MUST strictly follow the rules below:
+
+## 1. General Principles
+- Code must be clean, readable, and maintainable
+- Follow consistent naming conventions
+- Avoid unnecessary complexity
+- Prefer clarity over cleverness
+- Always write code as if it will be maintained long-term
+
+## 2. Language & Style
+- Use TypeScript instead of JavaScript whenever possible
+- Always use ES modules (import/export), never require
+- Use arrow functions instead of function declarations
+- Prefer const over let, never use var
+
+## 3. Naming Conventions
+- Variables & functions: camelCase
+- Components: PascalCase
+- Constants: UPPER_SNAKE_CASE
+- File names: kebab-case
+
+## 4. React Rules
+- Always use functional components
+- Always type props using TypeScript interfaces
+- Avoid using "any"
+- Use hooks properly (no conditional hooks)
+- Keep components small and reusable
+- Extract logic into custom hooks when needed
+
+## 5. Project Structure
+- Separate concerns clearly (components, services, hooks, utils)
+- Avoid large files (>300 lines)
+- Each component should live in its own folder
+
+## 6. Formatting
+- Use 2 spaces indentation
+- Always use semicolons
+- Use single quotes for strings
+- Add trailing commas where valid
+
+## 7. Error Handling
+- Always handle errors properly
+- Never leave empty catch blocks
+- Return meaningful error messages
+
+## 8. API & Async Code
+- Use async/await instead of .then()
+- Wrap API calls in try/catch
+- Do not call APIs directly inside components, use services
+
+## 9. Reusability
+- Avoid duplicated code
+- Extract reusable logic into helpers or hooks
+
+## 10. Comments
+- Only write meaningful comments
+- Do not explain obvious code
+- Add comments for complex logic only
+
+## 11. UI/UX (if applicable)
+- Keep UI minimal and clean
+- Use consistent spacing
+- Follow a modern design approach
+
+## 12. Strict Rules
+- DO NOT generate incomplete code
+- DO NOT leave TODO unless explicitly asked
+- DO NOT use console.log in production code
+- ALWAYS return fully working code
+
+## 13. When modifying existing code
+- Do not break existing logic
+- Follow the current architecture
+- Keep changes minimal and precise
+
+## 14. Imports
+- Always use absolute imports if configured
+- Group imports: external -> internal -> styles
+- Remove unused imports
+
+## 15. File Organization
+- One component per file
+- Do not mix business logic inside UI components
+- Services must not depend on UI
+
+## 16. State Management
+- Keep state minimal
+- Avoid deeply nested state
+- Prefer derived state instead of duplicated state
